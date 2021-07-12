@@ -6,4 +6,10 @@
 
 
 def fun_ismultiple(m, n):
-	return False # replace with your solution
+	if m == 0:
+		return True
+	elif(n == 0):# to handle zero division
+		return False
+	elif m%n == 0:
+		return True
+	return False 
