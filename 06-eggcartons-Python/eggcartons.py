@@ -5,5 +5,15 @@
 
 
 def fun_eggcartons(eggs):
-	# your code goes here
-	return 1
+	# for the least number of egg cartons
+	if eggs == 0:
+		return 0
+	# for 12 or less number of eggs
+	elif eggs <= 12:
+		return 1
+	# to get cartons for number of eggs that are multiples of 12
+	elif (eggs % 12 == 0):
+		return eggs // 12 
+	# for all the oter cases
+	else:
+		return (eggs // 12) + 1
