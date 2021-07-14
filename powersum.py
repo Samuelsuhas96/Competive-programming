@@ -11,9 +11,18 @@
 # return 0.
 
 def powerSum(n, k):
-    # Your code goes here...
-    return 0
+    if n > 0 and k > 0:
+        result = 0
+        for i in range(1,n+1):
+            print(i**k)
+            result+=i**k
+            # print(result)
+        return result
+    else:
+        return 0
 
 # Write your own test cases here...
-
+# print(powerSum(5,2888))
+# print(powerSum(19999,199922))
+# print(powerSum(100,-2))
 print ("All test cases passed...")
