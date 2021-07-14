@@ -7,5 +7,35 @@
 
 
 
+def look(street,v):
+	first = street - v
+	second = v+8 - street
+	if first <= second:
+		return v
+	else:
+		return v+8
+
+	# for i in l:
+	# 	if street < i:
+	# 		a = street - i
+	# 		b = (i+8) - street
+	# 		if a>b:
+	# 			return b
+	# 		else:
+	# 			return a
+	# 	else:
+
+
+
 def fun_nearestbusstop(street):
-	return -1
+	if street == 0:
+		return 0
+	l = []
+	for i in range(0,street,8):
+		l.append(i)
+	# print(l)
+	# print(look(street,l))
+	return look(street,l[-1])
+
+
+# print(fun_nearestbusstop(13))
