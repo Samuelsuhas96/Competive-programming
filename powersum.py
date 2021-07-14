@@ -9,7 +9,7 @@
 
 # If n is negative, return 0. Similarly, if k is negative, 
 # return 0.
-
+# Powersum
 def powerSum(n, k):
     if n > 0 and k > 0:
         result = 0
