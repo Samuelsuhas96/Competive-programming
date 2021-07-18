@@ -22,7 +22,21 @@
 #   [ 0, 1, 3] ]
 
 def removeRowAndCol(L, row, col):
-    # Your code goes here...
-    pass
+    for i in range(len(L)):
+        # print(i)
+        # 
+        for j in range(len(L[i])):
+            if j == col:
+                L[i].remove(L[i][j])
+            # print(j)
+    for  k in range(len(L)):
+        if k == row:
+            L.remove(L[k])
+    # print(L)
+    return L
+        # for j in 
+    
+
+print(removeRowAndCol([ [ 2, 3, 4, 5],[ 8, 7, 6, 5],[ 0, 1, 2, 3] ],1,2))
 
 # Write your own test cases.
