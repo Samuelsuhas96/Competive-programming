@@ -14,6 +14,38 @@
 # assert(nth_happy_number(7) == 28)
 # assert(nth_happy_number(8) == 31)
 
+def digit(n):
+	result = []
+	while(n>=1):
+		a = n%10
+		result.insert(0,a)
+		n = n//10
+	return result
+
+def ishappynumber(n):
+	# print(a)
+	if n<=0:
+		return False
+	else:
+		while( n != 1):
+			l = digit(n)
+			# print(l)
+			sum = 0
+			for i in l:
+				sum += i**2
+			n = sum
+			# print(n)
+			if n == 4:
+				return False
+		return True
 
 def nth_happy_number(n):
-	return 0
+	count = 0
+	i = 0
+	while(count <= n-1):
+		i += 1
+		if ishappynumber(i):
+			count += 1
+	return i
+
+print(nth_happy_number(2))
