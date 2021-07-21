@@ -16,7 +16,31 @@
 # assert(ishappynumber(98) == False)
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
+ 
+def digit(n):
+	result = []
+	while(n>=1):
+		a = n%10
+		result.insert(0,a)
+		n = n//10
+	return result
 
 def ishappynumber(n):
-	# your code goes here
-	pass
+	# print(a)
+	if n<=0:
+		return False
+	else:
+		while( n != 1):
+			l = digit(n)
+			print(l)
+			sum = 0
+			for i in l:
+				sum += i**2
+			n = sum
+			# print(n)
+			if n == 4:
+				return False
+		return True
+
+# print(ishappynumber(0))
+# print(digit(123456))
