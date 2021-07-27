@@ -7,5 +7,21 @@
 
 
 def fun_rotatestrings(s, n):
-	return s
+	if n > 0:
+		for i in range(n):
+			a = s[0]
+			b = s[1:]
+			s = b + a
+		return s
+	else:
+		n = abs(n)
+		for i in range(n):
+			a = s[-1]
+			b = s[0:-1]
+			s = a + b
+		return s
 
+# print(fun_rotatestrings("abcd",1))
+# print(fun_rotatestrings("abcd",1))
+# print(fun_rotatestrings("abcd",1))
+# print(fun_rotatestrings("abcd",1))
