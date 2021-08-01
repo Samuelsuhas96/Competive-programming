@@ -4,5 +4,16 @@
 # number n is a product of x and (x+1).
 
 def nthpronicnumber(n):
-	# Your code goes here
-	pass
+	count = 0 
+	i = 1
+	if n == 0:
+		return 0
+	else:
+		while(True):
+			j = i + 1
+			result = i*j
+			count += 1
+			if count == n:
+				return result
+			i += 1
+			
