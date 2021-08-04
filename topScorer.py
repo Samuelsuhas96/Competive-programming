@@ -15,13 +15,40 @@
 # string "None"). So, for example:
 
 def topScorer(data):
-    # Your code goes here...
-    return ""
+    d={}
+    sum = 0
+    print(data)
+    a = data.split("\n")
+    # print(a)
+    if a[0]=="" or a[0] == " ":
+        return None
+    for i in a:
+        if i != '':
+            b = i.split(",")
+            for j in b[1:]:
+                sum += int(j)
+            if sum in d:
+                d[sum].append(b[0])
+            else:
+                d[sum] = [b[0]]
+            sum = 0
+    if max(d):
+        if len(d[max(d)]) > 1:
+            s = ""
+            for k in d[max(d)]:
+                s += k+","
+            return s[0:-1]
+        else:
+            return d[max(d)][0]
+    print(d)
+    return a
+
 
 data = '''\
 Fred,10,20,30,40
 Wilma,10,20,30
 '''
+
 assert(topScorer(data) == 'Fred')
 
 data = '''\
